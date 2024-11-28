@@ -9,19 +9,29 @@
     --text-black-700: #504e70;
 }
 
+ body.dark
+{
+    --bg-black-900: #151515;
+    --bg-black-100: #222222;
+    --bg-black-50: #393939;
+    --text-black-900: #ffffff;
+    --text-black-700: #e9e9e9;
+}
 body
 {
     line-height: 1.5;
     font-size: 16px;
     font-family: 'poppins', sans-serif;
+    position: relative;
 }
 *
 {
-    margin: 0;
+    margin : 0;
     padding: 0;
     outline: none;
     text-decoration: none;
     box-sizing: border-box;
+    color: var(--text-black-900);
 }
 ::before, ::after
 {
@@ -59,6 +69,7 @@ ul
     max-width: 1100px;
     width: 100%;
     margin: auto;
+    padding-left: 80px;
 }
 
 .section .container
@@ -313,43 +324,59 @@ h3.my-profession
 }
 
 
-.home .home-img
-{
+.home .home-img {
     flex: 0 0 40%;
     max-width: 40%;
     text-align: center;
     position: relative;
 }
-.home .home-img::after
-{
+
+.home .home-img::after {
     content: '';
     position: absolute;
     width: 80px;
     height: 80px;
     border-bottom: 10px solid var(--skin-color);
     border-right: 10px solid var(--skin-color);
-    right: 10px;
-    bottom: 50px;
+    right: -10px;
+    bottom: 90px;
+    animation: float 3s ease-in-out infinite;
 }
-.home .home-img::before
-{
+
+.home .home-img::before {
     content: '';
     position: absolute;
     width: 80px;
     height: 80px;
-    /* background: red; */
     border-top: 10px solid var(--skin-color);
     border-left: 10px solid var(--skin-color);
     top: -20px;
     left: 0px;
+    animation: float 3s ease-in-out infinite;
 }
-.home .home-img img
-{
+
+.home .home-img img {
     margin: auto;
     border-radius: 5%;
     height: 400px;
+    animation: float 3s ease-in-out infinite;
+    transition: transform 0.3s ease;
+    display: block; /* Ensures the image is centered */
+    max-width: 100%; /* Responsive sizing */
 }
 
+.home .home-img img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
 
 /* about */
 
@@ -483,14 +510,12 @@ h3.my-profession
     flex: 0 0 50%;
     max-width: 50%;
     margin-top: 30px;
-    /* background-color: red; */
 }
 .about .about-content .experience
 {
     flex: 0 0 50%;
     max-width: 50%;
     margin-top: 30px;
-    /* background-color: red; */
 }
 .about .about-content h3.title
 {
@@ -849,16 +874,14 @@ h3.my-profession
 }
 @media (max-width:991px)
 {
-    .portfolio .portfolio-item
-    {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
+    .contact .contact-info-item,
+    .portfolio .portfolio-item,
     .service .service-item
     {
         flex: 0 0 50%;
         max-width: 50%;
     }
+    .about .about-content .education,
     .home .home-info
     {
         flex: 0 0 100%;
@@ -868,4 +891,88 @@ h3.my-profession
     {
         display: none;
     }
+}
+@media (max-width:767px)
+{
+    .contact .contact-form .col-6,
+    .contact .contact-info-item,
+    .portfolio .portfolio-item,
+    .service .service-item,
+    .about .about-content .experience
+    .about .about-content .education,
+    .about .about-content .skills,
+    .about .about-content .personal-info
+    {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .about .about-content .experience {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-top: 20px;
+    }
+}
+
+
+
+.nav a.active {
+    color: var(--skin-color)
+}
+
+/* animation change on the  */
+
+/* Base section styles */
+.section {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transform: translateY(-20px);
+    transition: all 0.5s ease;
+}
+
+.section.active-section {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    transform: translateY(0);
+}
+
+/* Entrance animation */
+.section-enter {
+    animation: sectionEnter 0.6s ease forwards;
+}
+
+@keyframes sectionEnter {
+    0% {
+        opacity: 0;
+        transform: scale(0.9) translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Optional: Add a subtle hover effect to nav links */
+.nav a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #007bff; /* Choose your accent color */
+    transition: width 0.3s ease;
+}
+
+.nav a.active::after {
+    width: 100%;
 }
