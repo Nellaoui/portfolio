@@ -216,7 +216,7 @@ ul
     top: 20px;
     border-radius: 5px;
     background: var(--bg-black-100);
-    display: none;
+    display: none;  
     align-items: center;
     justify-content: center;
 }
@@ -855,6 +855,12 @@ h3.my-profession
     padding: 0 50px;
     cursor: pointer;
 }
+
+/* @media(min-wdith:1200px) {
+    .humberger-menu {
+        display: none;
+    }
+} */
 
 @media (max-width:1199px)
 {
