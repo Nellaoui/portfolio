@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
-
-
 :root
 {
     --bg-black-900: #f2f2fc;
@@ -149,8 +146,7 @@ ul
     box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
 /* aside */
-.aside
-{
+.aside {
     width: 270px;
     background: var(--bg-black-100);
     position: fixed;
@@ -158,58 +154,60 @@ ul
     top: 0;
     padding: 30px;
     border-right: 1px solid var(--bg-black-50);
-    height:  100%;
+    height: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Change to column layout */
     align-items: center;
     z-index: 10;
 }
-.aside .logo
-{
-    position: absolute;
-    top : 50px;
-    font-size: 30px;
-    text-transform: capitalize;
+
+.aside .logo {
+    position: relative; /* Change from absolute to relative */
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px; /* Add margin to create space between logo and nav */
+    top: 0; /* Remove top positioning */
 }
-.aside .logo a
-{
+
+
+.aside .logo a {
     color: var(--text-black-900);
     font-weight: 700;
-    padding:  15px 20px;
+    padding: 15px 20px;
     font-size: 30px;
     letter-spacing: 5px;
     position: relative;
+    display: inline-block;
 }
-.aside .logo a span
-{
+
+.aside .logo a span {
     font-family: 'clicker script', cursive;
     font-size: 40px;
 }
-.aside .logo a::before
-{
+
+.aside .logo a::before {
     content: '';
     position: absolute;
     width: 20px;
     height: 20px;
-    border-bottom: 5px solid var(--skin-color);   /*  change this to var(--skin-clolr)*/
-    border-left: 5px solid var(--skin-color);   /*  change this to var(--skin-clolr)*/
+    border-bottom: 5px solid var(--skin-color);
+    border-left: 5px solid var(--skin-color);
     bottom: 0;
     left: 0;
 }
-.aside .logo a::after
-{
+
+.aside .logo a::after {
     content: '';
     position: absolute;
     width: 20px;
     height: 20px;
-    border-top: 5px solid var(--skin-color);  /*  change this to var(--skin-clolr)*/
-    border-right: 5px solid var(--skin-color); /*  change this to var(--skin-clolr)*/
+    border-top: 5px solid var(--skin-color);
+    border-right: 5px solid var(--skin-color);
     top: 0;
     right: 0;
 }
 
-.aside .nav-toggler
-{
+.aside .nav-toggler {
     height: 40px;
     width: 45px;
     border: 1px solid var(--bg-black-50);
@@ -219,21 +217,21 @@ ul
     top: 20px;
     border-radius: 5px;
     background: var(--bg-black-100);
-    display: none;  
+    display: none;
     align-items: center;
     justify-content: center;
+    z-index: 15;
 }
-.aside .nav-toggler span
-{
+
+.aside .nav-toggler span {
     height: 2px;
     width: 18px;
     background: var(--skin-color);
     display: inline-block;
     position: relative;
-
 }
-.aside .nav-toggler span::before
-{
+
+.aside .nav-toggler span::before {
     content: '';
     height: 2px;
     width: 18px;
@@ -243,8 +241,7 @@ ul
     left: 0;
 }
 
-.aside .nav-toggler span::after
-{
+.aside .nav-toggler span::after {
     content: '';
     height: 2px;
     width: 18px;
@@ -254,33 +251,89 @@ ul
     left: 0;
 }
 
-.aside .nav
-{
-    margin-top: 50px;
+
+.aside .nav {
+    margin-top: 0; /* Remove top margin */
+    width: 100%;
+    flex-grow: 1; /* Allow nav to take remaining space */
+    overflow-y: auto; /* Add scrolling if content is too long */
 }
-.aside .nav li
-{
+.aside .nav li {
     margin-bottom: 20px;
     display: block;
 }
-.aside .nav li a
-{
+
+.aside .nav li a {
     font-size: 16px;
     font-weight: 600;
     display: block;
-    border-bottom:  1px solid var(--bg-black-50);
+    border-bottom: 1px solid var(--bg-black-50);
     color: var(--text-black-900);
     padding: 5px 15px;
+    transition: color 0.3s ease;
 }
 
-.aside .nav li a.active
-{
+.aside .nav li a:hover {
     color: var(--skin-color);
 }
-.aside .nav li a i
-{
-    margin-right: 15px;
 
+.aside .nav li a.active {
+    color: var(--skin-color);
+}
+
+.aside .nav li a i {
+    margin-right: 15px;
+}
+
+/* Responsive Breakpoints */
+@media screen and (max-width: 1199px) {
+    .aside {
+        left: -270px; /* Hide off-screen */
+        transition: left 0.3s ease;
+    }
+
+    .aside.open {
+        left: 0; /* Show when opened */
+    }
+
+    .aside .nav-toggler {
+        left: 20px;
+        display: flex;
+    }
+
+    .aside .nav-toggler.active span {
+        background: transparent;
+    }
+
+    .aside .nav-toggler.active span::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .aside .nav-toggler.active span::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    /* Mobile Navigation Adjustments */
+    .aside .logo {
+        top: 20px;
+    }
+
+    .aside .nav {
+        margin-top: 100px;
+    }
+}
+
+/* Very Small Screens */
+@media screen and (max-width: 575px) {
+    .aside .logo a {
+        font-size: 24px;
+    }
+
+    .aside .logo a span {
+        font-size: 34px;
+    }
 }
 /* home */
 .home
@@ -1001,7 +1054,6 @@ h3.my-profession
 
 .footer-back
 {
-    /* background-color: red; */
     height: 40vh;
     background-color: var(--bg-black-900);
 }

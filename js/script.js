@@ -1,3 +1,29 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const navToggler = document.querySelector('.nav-toggler');
+    const aside = document.querySelector('.aside');
+    const navLinks = document.querySelectorAll('.aside .nav li a');
+
+    navToggler.addEventListener('click', function() {
+        this.classList.toggle('active');
+        aside.classList.toggle('open');
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navToggler.classList.remove('active');
+            aside.classList.remove('open');
+            navLinks.forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+
+    document.addEventListener('click', function(event) {
+        if (!aside.contains(event.target) && !navToggler.contains(event.target)) {
+            navToggler.classList.remove('active');
+            aside.classList.remove('open');
+        }
+    });
+});
 
 const dayNight = document.querySelector('.day-night');
 dayNight.addEventListener('click', () => {
@@ -6,7 +32,6 @@ dayNight.addEventListener('click', () => {
     document.body.classList.toggle('dark');
 });
 
-// Make sure button is in the correct state on page load
 window.addEventListener('load', () => {
     if (document.body.classList.contains('dark')) {
         dayNight.querySelector('i').classList.add('fa-sun');
@@ -14,7 +39,6 @@ window.addEventListener('load', () => {
         dayNight.querySelector('i').classList.add('fa-moon');
     }
 });
-// typing animation
 var typed = new Typed('.typing', {
     strings: ["Aspiring software engineer", "Web Developer", "Student at 1337"],
     typeSpeed: 100,
@@ -22,16 +46,7 @@ var typed = new Typed('.typing', {
     loop: true
 });
 
-// Navigation Link Activation
-// const navLinks = document.querySelectorAll('.nav a');
-// navLinks.forEach(link => {
-//     link.addEventListener('click', () => {
-//         navLinks.forEach(navLink => navLink.classList.remove('active'));
-//         link.classList.add('active');
-//     });
-// });
 
-// Section Activation Logic
 document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav a');
     const sections = document.querySelectorAll('section');
@@ -67,7 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Hamburger Menu for mobile
 document.addEventListener('DOMContentLoaded', () => {
     const hamburgerMenu = document.querySelector('.hamburger-menu');
     const navOverlay = document.querySelector('.nav-overlay');
