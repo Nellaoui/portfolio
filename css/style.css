@@ -840,12 +840,57 @@ h3.my-profession
     max-width: 25%;
     text-align: center;
     margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .contact .contact-info-item .icon
 {
     font-size: 25px;
     color: var(--skin-color);
+    margin-bottom: 10px;
 }
+
+.contact  .contact-info-item .contact-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    color: var(--text-black-900);
+    border-radius: 50%;
+    margin-right: 0px;
+    margin-top: -50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+
+.contact  .contact-info-item .icon .fab
+{
+    font-size: 25px;
+    /* line-height: 60px; */
+    color: var(--skin-color);
+}
+
+.contact  .contact-info-item:hover .contact-icon {
+    background-color: var(--skin-color);
+}
+.contact  .contact-info-item:hover .icon .fab
+{
+    font-size: 30px;
+    color: white;
+}
+
+/* .contact  .contact-info-item:hover .icon .fab {
+    color: white;
+}
+.contact-icon:hover {
+  background: var(--skin-color);
+  transform: scale(1.1); 
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+  background-color: var(--skin-color);
+}  */
 
 .contact .contact-info-item h4
 {
@@ -853,7 +898,8 @@ h3.my-profession
     font-weight: 700;
     color: var(--text-black-900);
     text-transform: capitalize;
-    margin: 15px 0;
+    margin: 0; /* Removed previous margin */
+    text-align: center;
 }
 
 .contact .contact-info-item p
@@ -1056,4 +1102,49 @@ h3.my-profession
 {
     height: 40vh;
     background-color: var(--bg-black-900);
+}
+
+.social-links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: var(--bg-black-900);
+    color: var(--text-black-900);
+    border-radius: 50%;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon i {
+    font-size: 24px;
+}
+
+.social-icon.linkedin:hover {
+    background: #0077B5;
+    color: white;
+}
+
+.social-icon.github:hover {
+    background: #333;
+    color: white;
+}
+
+/* Dark mode adjustments */
+body.dark .social-icon {
+    background: var(--bg-black-100);
+    color: var(--text-black-700);
+}
+
+body.dark .social-icon:hover {
+    color: white;
 }
