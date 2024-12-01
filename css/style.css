@@ -7,6 +7,7 @@
     --bg-black-50: #e8dfec;
     --text-black-900: #302e4d;
     --text-black-700: #504e70;
+    background-color: var(--bg-black-900);
 }
 
  body.dark
@@ -1084,11 +1085,11 @@ h3.my-profession
 @keyframes sectionEnter {
     0% {
         opacity: 0;
-        transform: scale(0.9) translateY(-20px);
+        transform:  translateY(-20px);
     }
     100% {
         opacity: 1;
-        transform: scale(1) translateY(0);
+        transform: translateY(0);
     }
 }
 

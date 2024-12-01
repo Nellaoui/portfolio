@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Typed.js initialization
     new Typed('.typing', {
-        strings: ["Aspiring software engineer", "Web Developer", "Student at 1337"],
+        strings: ["an Aspiring software engineer", "a Web Developer", "a Student at 1337"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
