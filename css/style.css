@@ -787,6 +787,21 @@ h3.my-profession
     display: block;
 }
 
+.portfolio-img a {
+    display: block;
+    cursor: pointer;
+}
+
+.portfolio-img a img {
+    transition: opacity 0.3s ease;
+}
+
+
+.portfolio-img a:hover img {
+    opacity: 0.8;
+}
+
+
 .portfolio .portfolio-item-inner .portfolio-img h4
 {
 
