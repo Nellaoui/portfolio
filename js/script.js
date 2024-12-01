@@ -32,10 +32,8 @@ document.addEventListener('DOMContentLoaded', function() {
             section.classList.remove('section-enter');
         });
 
-        // Add active class to the clicked nav link
         targetLink.classList.add('active');
 
-        // Get the target section and add active classes
         const targetId = targetLink.getAttribute('href').substring(1);
         const targetSection = document.getElementById(targetId);
 
@@ -45,18 +43,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Add click event listeners to nav links
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             activateSection(e.currentTarget);
             
-            // Close the mobile navigation after selecting a link
             navToggler.classList.remove('active');
             aside.classList.remove('open');
         });
     });
 
-    // Add click event listeners to all "Hire Me" buttons
     hireButtons.forEach(button => {
         button.addEventListener('click', (e) => {
             const contactLink = document.querySelector('.nav a[href="#contact"]');
@@ -66,13 +61,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Activate home section by default
     const homeLink = document.querySelector('.nav a[href="#home"]');
     if (homeLink) {
         activateSection(homeLink);
     }
 
-    // Dark mode toggle
     const dayNight = document.querySelector('.day-night');
     dayNight.addEventListener('click', () => {
         dayNight.querySelector('i').classList.toggle('fa-sun');
