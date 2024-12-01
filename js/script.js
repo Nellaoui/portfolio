@@ -67,10 +67,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Activate home section by default
-    // const homeLink = document.querySelector('.nav a[href="#home"]');
-    // if (homeLink) {
-    //     activateSection(homeLink);
-    // }
+    const homeLink = document.querySelector('.nav a[href="#home"]');
+    if (homeLink) {
+        activateSection(homeLink);
+    }
 
     // Dark mode toggle
     const dayNight = document.querySelector('.day-night');
