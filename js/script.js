@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
             section.classList.remove('active-section');
             section.classList.remove('section-enter');
         });
-
         targetLink.classList.add('active');
 
         const targetId = targetLink.getAttribute('href').substring(1);
