@@ -80,3 +80,16 @@ document.addEventListener('DOMContentLoaded', function() {
         loop: true
     });
 });
+
+
+function sendEmail() {
+    var params = {
+        from_name: document.getElementById("fullName").value,
+        email_id: document.getElementById("email_id").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value,
+    };
+    emailjs.send("portflio", "template_cs81eyc", params).then(function (res) {
+        alert("Your message sent successfully" + res.status);
+    })
+    }

@@ -85,10 +85,12 @@
                                         technology solutions in a dynamic environment.</p>
                                 </div>
                                 <div class="social-links padd-15">
-                                    <a href="https://www.linkedin.com/in/noaman-el-allaoui-92b17a218/" target="_blank" class="social-icon linkedin">
+                                    <a href="https://www.linkedin.com/in/noaman-el-allaoui-92b17a218/" target="_blank"
+                                        class="social-icon linkedin">
                                         <i class="fab fa-linkedin"></i>
                                     </a>
-                                    <a href="https://www.github.com/Nellaoui/" target="_blank" class="social-icon github">
+                                    <a href="https://www.github.com/Nellaoui/" target="_blank"
+                                        class="social-icon github">
                                         <i class="fab fa-github"></i>
                                     </a>
                                 </div>
@@ -117,7 +119,8 @@
                                     </div>
                                     <div class="row">
                                         <div class="buttons padd-15">
-                                            <a href="/data/NoamanElAllaouiResume.pdf"  download="Nouman_Elallaoui_Resume.pdf" class="btn">Download CV</a>
+                                            <a href="/data/NoamanElAllaouiResume.pdf"
+                                                download="Nouman_Elallaoui_Resume.pdf" class="btn">Download CV</a>
                                             <a href="#contact" class="btn hire-me">Hire Me</a>
                                         </div>
                                     </div>
@@ -288,10 +291,13 @@
                                     <i class="fa fa-server"></i>
                                 </div>
                                 <h4>System Administration & DevOps</h4>
-                                <p>Offering foundational support in managing IT infrastructure, including basic server setup,
-                                    configuration, and maintenance. Capable of implementing straightforward automation workflows and monitoring
-                                     system performance to ensure smooth operations. Focused on learning and improving skills to
-                                     provide scalable and reliable solutions.</p>
+                                <p>Offering foundational support in managing IT infrastructure, including basic server
+                                    setup,
+                                    configuration, and maintenance. Capable of implementing straightforward automation
+                                    workflows and monitoring
+                                    system performance to ensure smooth operations. Focused on learning and improving
+                                    skills to
+                                    provide scalable and reliable solutions.</p>
                             </div>
                         </div>
                         <!-- services item end -->
@@ -383,8 +389,11 @@
                                     <a href="https://github.com/Referee95/0.fb" target="_blank">
                                         <img src="images/portfolio/portfolio3.png" alt="Server">
                                     </a>
-                                    <p>Create IRC (Internet Relay Chat) server in C++, fully compatible with an official client. <br>
-                                        <span class="skills"> Skills </span>· Rigor <br>· Unix <br>· Networking <br>· System Administration <br>· Object-oriented programming <br> · C++ (Programming Language)
+                                    <p>Create IRC (Internet Relay Chat) server in C++, fully compatible with an official
+                                        client. <br>
+                                        <span class="skills"> Skills </span>· Rigor <br>· Unix <br>· Networking <br>·
+                                        System Administration <br>· Object-oriented programming <br> · C++ (Programming
+                                        Language)
                                     </p>
                                 </div>
                             </div>
@@ -396,12 +405,12 @@
                                 <div class="portfolio-img">
                                     <h4>inception</h4>
                                     <a href="https://github.com/Nellaoui/Inception" target="_blank">
-                                    <img src="images/portfolio/portfolio2.png" alt="Inception Project">
-                                    <p>This project aims to broaden your knowledge of system administration by using
-                                        Docker. You will virtualize several Docker images, creating them in your new
-                                        personal virtual machine. <span class="skills">Skills :</span>· System
-                                        Administration <br>· Rigor <br>· Network Administration <br>· Dokcer <br>·
-                                        Networking <br>· Docker</p>
+                                        <img src="images/portfolio/portfolio2.png" alt="Inception Project">
+                                        <p>This project aims to broaden your knowledge of system administration by using
+                                            Docker. You will virtualize several Docker images, creating them in your new
+                                            personal virtual machine. <span class="skills">Skills :</span>· System
+                                            Administration <br>· Rigor <br>· Network Administration <br>· Dokcer <br>·
+                                            Networking <br>· Docker</p>
                                 </div>
                             </div>
                         </div>
@@ -428,11 +437,11 @@
                                 <div class="portfolio-img">
                                     <h4>so_long</h4>
                                     <a href="https://github.com/Nellaoui/so_long" target="_blank">
-                                    <img src="images/portfolio/portfolio6.png" alt="2D Game Project">
-                                    <p>This project is a very small 2D game.
-                                        Its purpose is to make you work with textures, sprites,
-                                        and some other very basic gameplay elements. <span class="skills">Skills
-                                            :</span>· C (Programming Language)</p>
+                                        <img src="images/portfolio/portfolio6.png" alt="2D Game Project">
+                                        <p>This project is a very small 2D game.
+                                            Its purpose is to make you work with textures, sprites,
+                                            and some other very basic gameplay elements. <span class="skills">Skills
+                                                :</span>· C (Programming Language)</p>
                                 </div>
                             </div>
                         </div>
@@ -463,7 +472,7 @@
             <!-- portfolio section end -->
             <!-- contact section start -->
             <section class="contact section" id="contact">
-                <div class="container">
+                <form class="container" onsubmit="sendEmail(); reset(); return false;">
                     <div class="row">
                         <div class="section-title pad-15">
                             <h2>Contact Me</h2>
@@ -486,7 +495,8 @@
                         <!-- contact info item start -->
                         <div class="contact-info-item padd-15">
                             <div class="icon">
-                                <a href="https://www.linkedin.com/in/noaman-el-allaoui-92b17a218/" target="_blank" class="contact-icon">
+                                <a href="https://www.linkedin.com/in/noaman-el-allaoui-92b17a218/" target="_blank"
+                                    class="contact-icon">
                                     <i class="fab fa-linkedin"></i>
                                 </a>
                             </div>
@@ -525,26 +535,26 @@
                             <div class="row">
                                 <div class="form-item col-6 padd-15">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Name">
+                                        <input type="text" class="form-control" placeholder="Name" id="fullName">
                                     </div>
                                 </div>
                                 <div class="form-item col-6 padd-15">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Email">
+                                        <input id="email_id" type="email" class="form-control" placeholder="Email">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="form-item col-12 padd-15">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Subject">
+                                        <input id="subject" type="text" class="form-control" placeholder="Subject">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="form-item col-12 padd-15">
                                     <div class="form-group">
-                                        <textarea name="" id="" class="form-control" placeholder="Message"></textarea>
+                                        <textarea name="" id="message" class="form-control" placeholder="Message"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -555,20 +565,28 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
                 <!-- contact section end -->
                 <!-- main content end -->
-                <!-- dark mode switcher start -->
-
-                <!-- dark mode switcher end -->
         </div>
         <!-- main container end -->
         <!-- JS file -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"
             integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-            
+
         <script src="js/script.js"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+            (function () {
+                emailjs.init({
+                    publicKey: "LjmIHdbPYmjDptZnn",
+                });
+            })();
+        </script>
 </body>
 <footer class="footer-back"></footer>
+
 </html>
