@@ -1165,3 +1165,50 @@ body.dark .social-icon {
 body.dark .social-icon:hover {
     color: white;
 }
+
+.tech-logos {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  display: none;
+}
+
+.portfolio-item-inner:hover .tech-logos {
+  display: block;
+}
+
+.tech-logos i {
+  font-size: 24px;
+  margin: 10px;
+  color: #333;
+}
+
+.tech-stack {
+    width: 40px;
+    height: 40px;
+    background: rgba(0,0,0,0.9);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+  }
+  
+  .tech-icon {
+    width: 40px;
+    height: 40px;
+    fill: white;
+    transition: all 0.3s ease;
+  }
+  
+  .tech-icon:hover {
+    transform: scale(1.2);
+    fill: #3498db;
+  }
