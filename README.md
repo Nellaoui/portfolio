@@ -9,9 +9,8 @@ A modern, responsive portfolio website showcasing my work and professional journ
 
 [Live Demo](#) • [Features](#features) • [Installation](#installation) • [Technologies](#technologies)
 
-![Portfolio Preview](<img width="2471" alt="Screen Shot 2024-12-19 at 10 17 30 PM" src="https://github.com/user-attachments/assets/18d03e9c-e643-480f-994e-e293f3489553" />)
+![](<img width="2471" alt="Screen Shot 2024-12-19 at 10 17 30 PM" src="https://github.com/user-attachments/assets/18d03e9c-e643-480f-994e-e293f3489553" />)
 
-</div>
 
 ## ✨ Features
 
